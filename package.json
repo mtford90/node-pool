@@ -1,7 +1,7 @@
 {
-  "name": "generic-pool",
+  "name": "generic-pool-browser",
   "description": "Generic resource pooling for Node.JS",
-  "version": "3.7.1",
+  "version": "3.7.2",
   "author": "James Cooper <james@bitmechanic.com>",
   "contributors": [
     {
@@ -51,6 +51,10 @@
     {
       "name": "Lewis J Ellis",
       "email": "me@lewisjellis.com"
+    },
+    {
+      "name": "Michael Ford",
+      "email": "mtford@gmail.ccom"
     }
   ],
   "keywords": [
@@ -58,20 +62,29 @@
     "pooling",
     "throttle"
   ],
+  "browser": "dist/index.js",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "http://github.com/coopernurse/node-pool.git"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
     "@types/node": "^8.5.1",
     "eslint": "^4.9.0",
     "eslint-config-prettier": "^2.6.0",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-promise": "^3.3.0",
     "prettier": "^1.7.4",
+    "rollup": "^2.0.2",
+    "rollup-plugin-babel": "^4.4.0",
     "tap": "^8.0.0",
-    "typescript": "^2.6.2"
+    "typescript": "^2.6.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "rollup-plugin-progress": "^1.1.1"
   },
   "engines": {
     "node": ">= 4"
@@ -79,7 +92,13 @@
   "scripts": {
     "lint": "eslint lib test index.js .eslintrc.js",
     "lint-fix": "eslint --fix lib test index.js .eslintrc.js",
-    "test": "tap test/*-test.js "
+    "test": "tap test/*-test.js ",
+    "compile": ""
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "core-js": "^3.6.4",
+    "events": "^3.1.0"
+  }
 }
