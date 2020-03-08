@@ -1,3 +1,5 @@
+*This is a fork of node-pool, transpiled for the browser.*
+
 [![build status](https://secure.travis-ci.org/coopernurse/node-pool.png)](http://travis-ci.org/coopernurse/node-pool)
 
 # Generic Pool
