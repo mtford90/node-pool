@@ -1,9 +1,16 @@
 {
   "name": "generic-pool-browser",
   "description": "Generic resource pooling for Node.JS",
-  "version": "3.7.3",
+  "version": "3.7.4",
   "author": "James Cooper <james@bitmechanic.com>",
   "types": "./index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "package.json",
+    "index.js",
+    "index.d.ts"
+  ],
   "contributors": [
     {
       "name": "James Cooper",
